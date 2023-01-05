@@ -1,0 +1,60 @@
+function apartmentHunting(blocks, reqs) {
+	// Write your code here.
+	let count = 0;
+	let index = 0;
+	for (let i = 0; i < blocks.length; i++) {
+		let temp = 0;
+		for (let j = 0; j < reqs.length; j++) {
+			if (blocks[i][reqs[j]]) {
+				temp++;
+			}
+		}
+		if (temp > count) {
+			count = temp;
+			index = i;
+		}
+	}
+	return index+1;
+}
+
+
+// Do not edit the line below.
+exports.apartmentHunting = apartmentHunting;
+
+Sample Input
+blocks = [
+{
+    "gym": false,
+    "school": true,
+    "store": false,
+},
+{
+    "gym": true,
+    "school": false,
+    "store": false,
+},
+{
+    "gym": true,
+    "school": true,
+    "store": false,
+},
+{
+    "gym": false,
+    "school": true,
+    "store": false,
+},
+{
+"gym": false,
+"school": true,
+"store": true,
+}
+]
+reqs = ["gym", "school", "store"]
+
+
+
+
+
+
+
+
